@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-week4-app",
-    "slug": "react-native-week4-app",
+    "name": "react-native-blog-app",
+    "slug": "react-native-blog-app",
     "platforms": [
       "ios",
       "android",
