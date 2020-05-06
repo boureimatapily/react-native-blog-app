@@ -47,10 +47,13 @@ const styles = StyleSheet.create({
     },
     ImageContainer:{
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
+        borderLeftWidth:10,
+        borderLeftColor:"violet",
+        
     },
     image:{ 
-       width:320,
+       width:300,
       marginTop:10 },
     shortText:{
       fontWeight:"bold",
