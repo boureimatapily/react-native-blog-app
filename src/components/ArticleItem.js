@@ -28,7 +28,7 @@ export default class ArticleItem extends Component {
                     <Image source={image} style={styles.image} />
                 </View>
                 <View style={styles.shortTextContainer}>
-                    <Text style={styles.shortText}>
+                    <Text style={styles.shortText} numberOfLines={2}>
                         {this.props.shortText}
                     </Text>
                     <View style={styles.profilContainer}>
@@ -47,7 +47,10 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         justifyContent: "center",
-        marginBottom: 25,
+        marginBottom: 15,
+        backgroundColor:"white",
+        height:120,
+        marginHorizontal:15
 
     },
     ImageContainer: {
@@ -61,8 +64,9 @@ const styles = StyleSheet.create({
     },
     shortTextContainer: {
         flex: 7,
-        marginLeft: 20,
-        marginTop: 10
+        marginLeft: 30,
+        marginTop: 20,
+        marginRight:10
     },
     image: {
         width: 100,

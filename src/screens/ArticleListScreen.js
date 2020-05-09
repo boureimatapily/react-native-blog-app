@@ -12,7 +12,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi.jpg'),
       profileName:"Boureima",
        profilehr:"* 4 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu. Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut.  Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris. Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:2,
@@ -21,7 +21,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi1.jpg'),
       profileName:"Ibrahim", 
       profilehr:"* 10 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit  eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:3,
@@ -30,7 +30,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi.jpg'),
       profileName:"Boureima", 
       profilehr:"* 20 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum  velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:4,
@@ -39,7 +39,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi1.jpg'),
       profileName:"Ibrahim", 
       profilehr:"* 50 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu. Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:5,
@@ -48,7 +48,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi.jpg'),
       profileName:"Boureima", 
       profilehr:"* 12 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:6,
@@ -57,7 +57,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi1.jpg'),
       profileName:"Boureima", 
       profilehr:"* 12 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
     {
       id:7,
@@ -66,7 +66,7 @@ export class ArticleListScreen extends Component {
       profileimage:require('../../assets/moi.jpg'),
       profileName:"Boureima", 
       profilehr:"* 12 min",
-      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit magna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non cillum minim occaecat occaecat esse cupidatat cillu" ,
+      LongText:"Occaecat ea do tempor et cupidatat veniam veniam eu.Quis anim elit eiusmod deserunt sit consequat velit \n \nmagna esse labore ut. Dolor sit occaecat adipisicing ut nulla quis laborum velit nostrud amet ea laboris.Exercitation magna non \n \ncillum minim occaecat occaecat esse cupidatat cillu" ,
     },
   ]
   render() {
@@ -75,7 +75,7 @@ export class ArticleListScreen extends Component {
     return (
       <SafeAreaView style={styles.container}>
           <FlatList 
-          contentContainerStyle={{marginTop:10}}
+          
           data={this.List}
           renderItem={({item})=>{
             return  <ArticleItem 
@@ -96,6 +96,7 @@ export class ArticleListScreen extends Component {
 
 const styles = StyleSheet.create({
     container:{
+        backgroundColor:"#D6D2D2",
         
     }
 })

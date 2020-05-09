@@ -28,7 +28,7 @@ export default class ArticleDetails extends Component {
           <Text style={styles.profilehr}> {profilehr} </Text>
         </View>
         <View style={styles.longTextContainer}>
-          <Text style={styles.longText} numberOfLines={10}>
+          <Text style={styles.longText}>
             {LongText}
           </Text>
         </View>
@@ -43,13 +43,15 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "column",
     justifyContent: "center",
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    backgroundColor:"white"
+    
   },
   ImgCont:{
     flexDirection:"row"
   },
   ImgBorder:{
-    width:10,
+    width:20,
     height:120,
     backgroundColor:"violet",
     marginRight:10
@@ -60,12 +62,12 @@ const styles = StyleSheet.create({
     flexDirection:"row"
   },
   image: {
-    width: 300,
+    width: 270,
     height:300,
     marginTop: 10,
   },
   TextContainer:{
-    marginHorizontal:20
+    marginHorizontal:25
   },
   shortText: {
     fontWeight: "bold",

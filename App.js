@@ -5,7 +5,6 @@ import {createStackNavigator} from '@react-navigation/stack'
 import ArticleDetails from './src/components/ArticleDetails';
 import ArticleListScreen from './src/screens/ArticleListScreen';
 import Icons from './src/components/Icons';
-import ArticleItem from './src/components/ArticleItem';
 import {Ionicons} from '@expo/vector-icons'
 
 const Stack = createStackNavigator();
@@ -22,8 +21,6 @@ export default function App() {
                     headerRight:()=>(<Ionicons name="ios-search" size={30} style={{marginRight:15}} />)
                   }}
                   />
-            <Stack.Screen name="ArticleItem" component={ArticleItem} />
-            
             <Stack.Screen  name="ArticleDetails" component={ArticleDetails} 
                   options={{
                     headerTitleAlign:"center",
