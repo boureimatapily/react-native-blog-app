@@ -1,18 +1,92 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, StyleSheet, View, Image, Button, TouchableOpacity } from 'react-native'
 
-export class ArticleItem extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-       <Text>hello</Text>
-      </View>
-    )
-  }
+
+export default class ArticleItem extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        const { image, navigation} = this.props
+
+        return (
+            <TouchableOpacity 
+            onPress={() => {
+               navigation.navigate('ArticleDetails', {
+                    shortText: this.props.shortText,
+                    image: this.props.image,
+                    profileimage: this.props.profileimage,
+                    profileName: this.props.profileName,
+                    profilehr: this.props.profilehr,
+                    LongText: this.props.LongText
+                })
+            }}
+
+                style={styles.container}>
+                <View style={styles.ImageContainer}>
+                    <Image source={image} style={styles.image} />
+                </View>
+                <View style={styles.shortTextContainer}>
+                    <Text style={styles.shortText}>
+                        {this.props.shortText}
+                    </Text>
+                    <View style={styles.profilContainer}>
+                        <Image source={this.props.profileimage} style={styles.imageProfile} />
+                        <Text style={styles.profileName}> {this.props.profileName} </Text>
+                        <Text> {this.props.profilehr} </Text>
+                    </View>
+                </View>
+
+            </TouchableOpacity>
+        )
+    }
 }
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: "row",
+        justifyContent: "center",
+        marginBottom: 25,
+
+    },
+    ImageContainer: {
+        borderTopWidth: 10,
+        borderTopColor: "violet",
+        borderLeftWidth: 10,
+        borderLeftColor: "violet",
+        flex: 3,
+        height: 70,
+
+    },
+    shortTextContainer: {
+        flex: 7,
+        marginLeft: 20,
+        marginTop: 10
+    },
+    image: {
+        width: 100,
+        height: 100,
+        marginTop: 10
+    },
+    shortText: {
+        fontWeight: "bold",
+        textAlign: "justify",
+        width: 200
+    },
+    imageProfile: {
+        width: 40,
+        height: 40,
+        borderRadius: 50,
+        marginRight: 10
+    },
+    profilContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginVertical: 10
+    },
+    profileName: {
+        marginRight: 10
+    },
 
 })
-
-export default ArticleItem
