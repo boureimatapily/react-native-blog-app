@@ -34,7 +34,7 @@ export default class ArticleItem extends Component {
                     <View style={styles.profilContainer}>
                         <Image source={this.props.profileimage} style={styles.imageProfile} />
                         <Text style={styles.profileName}> {this.props.profileName} </Text>
-                        <Text> {this.props.profilehr} </Text>
+                        <Text style={styles.profilehr}> {this.props.profilehr} </Text>
                     </View>
                 </View>
 
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
     image: {
         width: 100,
         height: 100,
-        marginTop: 10
+        marginTop: 10,
+        marginLeft:10
     },
     shortText: {
         fontWeight: "bold",
@@ -88,5 +89,8 @@ const styles = StyleSheet.create({
     profileName: {
         marginRight: 10
     },
+    profilehr:{
+        color:'#aaaaaa'
+    }
 
 })

@@ -9,10 +9,15 @@ export default class ArticleDetails extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.ImageContainer}>
+        <View style={styles.ImgCont}>
+        <View style={styles.ImgBorder}></View>
+           <View style={styles.ImageContainer}>
           <Image source={image} style={styles.image} />
         </View>
-        <View style={styles.shortTextContainer}>
+        </View>
+       
+       <View style={styles.TextContainer}> 
+       <View style={styles.shortTextContainer}>
           <Text style={styles.shortText}>
             {shortText}
           </Text>
@@ -20,13 +25,15 @@ export default class ArticleDetails extends Component {
         <View style={styles.profilContainer}>
           <Image source={profileimage} style={styles.imageProfile} />
           <Text style={styles.profileName}> {profileName} </Text>
-          <Text> {profilehr} </Text>
+          <Text style={styles.profilehr}> {profilehr} </Text>
         </View>
         <View style={styles.longTextContainer}>
-          <Text style={styles.longText}>
+          <Text style={styles.longText} numberOfLines={10}>
             {LongText}
           </Text>
         </View>
+       </View>
+       
       </View>
     )
   }
@@ -38,25 +45,37 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginHorizontal: 20
   },
+  ImgCont:{
+    flexDirection:"row"
+  },
+  ImgBorder:{
+    width:10,
+    height:120,
+    backgroundColor:"violet",
+    marginRight:10
+  },
   ImageContainer: {
     justifyContent: "center",
     alignItems: "center",
-    borderLeftWidth: 10,
-    borderLeftColor: "violet",
-
+    flexDirection:"row"
   },
   image: {
     width: 300,
-    marginTop: 10
+    height:300,
+    marginTop: 10,
+  },
+  TextContainer:{
+    marginHorizontal:20
   },
   shortText: {
     fontWeight: "bold",
     marginTop: 10,
-    textAlign: "justify"
+    textAlign: "justify",
+    fontSize:18
   },
   imageProfile: {
-    width: 80,
-    height: 80,
+    width: 50,
+    height: 50,
     borderRadius: 50,
     marginRight: 10
   },
@@ -71,5 +90,8 @@ const styles = StyleSheet.create({
   profileName: {
     marginRight: 10
   },
+  profilehr:{
+    color:"#aaaaaa"
+  }
 
 })
