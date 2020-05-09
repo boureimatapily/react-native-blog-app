@@ -5,7 +5,6 @@ import {createStackNavigator} from '@react-navigation/stack'
 import ArticleDetails from './src/components/ArticleDetails';
 import ArticleListScreen from './src/screens/ArticleListScreen';
 import Icons from './src/components/Icons';
-import { color } from 'react-native-reanimated';
 import ArticleItem from './src/components/ArticleItem';
 
 
@@ -14,9 +13,8 @@ export default function App() {
   return (
       <NavigationContainer >
           <Stack.Navigator>
+          <Stack.Screen  name="ArticleList" component={ArticleListScreen}  />
             <Stack.Screen name="ArticleItem" component={ArticleItem} />
-            <Stack.Screen  name="ArticleList" component={ArticleListScreen}  />
-
             <Stack.Screen  name="ArticleDetails" component={ArticleDetails} 
                   options={{
                     headerTitleAlign:"center",
@@ -26,8 +24,7 @@ export default function App() {
                                backgroundColor:"violet",
                                width:160,
                                paddingLeft:10
-                               
-                                              },
+                                 },
                   headerRightContainerStyle:{marginRight:20},
                   headerTitle:null,
                   headerStyle:{height:120}
